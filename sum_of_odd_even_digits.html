@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sum of even and odd digits in a number</title>
+</head>
+
+<body>
+    <h2>Sum of even and odd digits in a number</h2>
+    <script>
+        function sumofevenodd(num) {
+            var oddsum = 0;
+            var evensum = 0;
+
+            var n = (num).toString();
+            for (let i = 0; i < n.length; i++)
+                if (i % 2 == 0)
+                    oddsum = oddsum + (n[i] - '0');
+                else
+                    evensum = evensum + (n[i] - '0');
+
+            console.log("Sum of odd digits in", num, "is:",oddsum);
+            console.log("Sum of even digits in", num, "is:",evensum);
+        }
+
+        var num = parseInt(prompt("Enter the number"));
+        sumofevenodd(num);
+    </script>
+</body>
+
+</html>
